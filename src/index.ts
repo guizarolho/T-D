@@ -6,6 +6,7 @@ import Monster from './Monster';
 const player1 = new Character('Legolas');
 const player2 = new Character('Ghimli');
 const player3 = new Character('Aragorn');
+
 player1.levelUp();
 player1.levelUp();
 player1.levelUp();
