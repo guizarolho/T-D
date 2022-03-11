@@ -13,7 +13,11 @@ export default class PVE extends Battle {
   }
 
   target() {
-    return getRandomInt(0, this._environment.length - 1);
+    let index = 0;
+    for (let i = 0; i < this._environment.length; i += 1) {
+      if (this._environment[i].lifePoints === -1) index += 1;
+    }
+    return index;
   }
 
   tradeBlows() {
