@@ -15,8 +15,12 @@ export default class PVP extends Battle {
     this._c2.attack(this._c1);
   }
 
+  isBothCharactersAlive = (c1: Fighter, c2: Fighter): boolean => (
+    c1.lifePoints > -1 && c2.lifePoints > -1
+  );
+
   fight(): number {
-    while (this._c1.lifePoints > -1 && this._c2.lifePoints > -1) {
+    while (this.isBothCharactersAlive(this._c1, this._c2)) {
       this.tradeBlows();
     }
     return this._c1.lifePoints === -1 ? -1 : 1;
