@@ -21,8 +21,8 @@ export default class Character implements Fighter {
   ) {
     this._race = race; 
     this._archetype = archetype;
-    this._maxLifePoints = this._race.maxLifePoints;
-    this._lifePoints = this._race.maxLifePoints / 2;
+    this._maxLifePoints = this._race.maxLifePoints / 2;
+    this._lifePoints = this._maxLifePoints;
     this._strength = getRandomInt(1, 10);
     this._defense = getRandomInt(1, 10);
     this._dexterity = this._race.dexterity;

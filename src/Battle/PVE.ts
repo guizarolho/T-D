@@ -33,8 +33,6 @@ export default class PVE extends Battle {
   fight(): number {
     while (this._player.lifePoints > -1 && this.enemiesAlive()) {
       this.tradeBlows();
-      console.log(this._player);
-      console.log(this._environment);
     }
     return this._player.lifePoints === -1 ? -1 : 1;
   }
