@@ -1,5 +1,4 @@
 import Fighter, { SimpleFighter } from '../Fighter';
-import getRandomInt from '../utils';
 import Battle from './Battle';
 
 export default class PVE extends Battle {
