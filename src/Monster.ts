@@ -1,5 +1,4 @@
 import { SimpleFighter } from './Fighter';
-import getRandomInt from './utils';
 
 export default class Monster implements SimpleFighter {
   private _lifePoints: number;
@@ -23,13 +22,5 @@ export default class Monster implements SimpleFighter {
   
   attack(enemy: SimpleFighter): void {
     enemy.receiveDamage(this._strength);
-  }
-
-  special(enemy: SimpleFighter): void {
-    enemy.receiveDamage(this._strength);
-  }
-  
-  levelUp(): void {
-    this._strength += getRandomInt(1, 10);
   }
 }
